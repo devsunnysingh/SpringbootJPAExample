@@ -29,6 +29,10 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "school_id")
+//    @JsonBackReference is an annotation from the Jackson library in Java,
+//    typically used to manage bi-directional relationships during
+//    JSON serialization and deserialization.
+//    It helps prevent infinite recursion when two objects refer to each other.
     @JsonBackReference
     private School school;
 

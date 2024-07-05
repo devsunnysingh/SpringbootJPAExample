@@ -26,3 +26,11 @@ Why do we need this?
    internal domain model without affecting what is shown to the world via API.
 2. Helps by not exposing sensitive information.
 3. Improves perfomance: Instead of sending the whole Paylad, we send whatever is needed by the downstream.
+4. Also, whenever we are creating a POST request, sometimes not all the values are present for the payload, so it allows us to send only the data which are  mandatory ones.
+
+
+
+Different Layers
+Service layer: handles all the business logic. allows code reusability. Helps in creating separation of concerns.
+Repository: Data Access layer.
+Controller: Presentiation layer.

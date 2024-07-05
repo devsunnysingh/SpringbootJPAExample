@@ -7,14 +7,32 @@ import java.util.List;
 @RestController
 public class StudentController {
     private final StudentRepository studentRepository;
+    private Student toStudent(StudentDTO studentDTO) {
+        var student = new Student();
+        student.setFirstName(studentDTO.firstName());
+        student.setLastName(studentDTO.lastName());
+        student.setEmail(studentDTO.email());
+        var school = new School();
+        school.setId(studentDTO.schoolId());
+
+        student.setSchool(school);
+        return student;
+    }
+
+    private final StudentResponseDto toStudentResponseDto(Student student) {
+        return new StudentResponseDto(student.getFirstName(), student.getLastName(), student.getEmail());
+    }
 
     public StudentController(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
     @PostMapping("/students")
-    public Student post(@RequestBody Student student){
-        return studentRepository.save(student);
+    public StudentResponseDto post(@RequestBody StudentDTO dto){
+        var student = toStudent(dto);
+        StudentResponseDto studentResponse=new StudentResponseDto(student.getFirstName(), student.getLastName(), student.getEmail());
+        var savedStudent=studentRepository.save(student);
+        return toStudentResponseDto(savedStudent);
 
     }
     @GetMapping("/students")

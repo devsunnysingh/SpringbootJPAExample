@@ -27,6 +27,11 @@ public class School {
         this.id = id;
         this.schoolName = schoolName;
     }
+
+    public School(String name) {
+        this.schoolName = name;
+    }
+
     public List<Student> getStudents() {
         return students;
     }

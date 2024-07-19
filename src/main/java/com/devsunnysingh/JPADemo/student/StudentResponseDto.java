@@ -1,4 +1,4 @@
-package com.devsunnysingh.JPADemo;
+package com.devsunnysingh.JPADemo.student;
 
 public record StudentResponseDto(
         String firstName,

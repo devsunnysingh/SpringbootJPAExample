@@ -1,5 +1,6 @@
-package com.devsunnysingh.JPADemo;
+package com.devsunnysingh.JPADemo.school;
 
+import com.devsunnysingh.JPADemo.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 

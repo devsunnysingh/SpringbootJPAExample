@@ -3,11 +3,11 @@ It has some extra features as compares to Repository interface.
 For example, it has a methodpre defined method to find all the records by firtName. We wont have to write queries for things like such.
 
 Allows writing more complex query methods.
-We can have custom query methods
+We can have custom query methodss
 
 1 student has 1 student profile.(1:1 relation)
 Here, student profile will have a foreign key and not the student as Student 
-can have or have not the student profile, but there should not be a student profile without any student.
+can have or have not the student profile,    but there should not be a student profile without any student.
 So, student profile is a primary entity and student profile is the secondary one.
 1 student studies in 1 school. (1:1 relation)
 ONe school has zero or many students. (1:M relation)
@@ -34,3 +34,5 @@ Different Layers
 Service layer: handles all the business logic. allows code reusability. Helps in creating separation of concerns.
 Repository: Data Access layer.
 Controller: Presentiation layer.
+
+Creating Sevice layer at 05:26:39

@@ -1,4 +1,4 @@
-package com.devsunnysingh.JPADemo;
+package com.devsunnysingh.JPADemo.school;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -35,4 +35,21 @@ Service layer: handles all the business logic. allows code reusability. Helps in
 Repository: Data Access layer.
 Controller: Presentiation layer.
 
-Creating Sevice layer at 05:26:39
+# Data validation
+1. Prevents attacks.
+2. Better structure of data.
+3. Reduce errors during processing.
+4. Improves user experience by providing clearer message.
+5. Improved API performance by providing first line of defence.
+6. Helps in complying with business rules.
+
+## Required dependancy
+```
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+    <version>3.3.2</version>
+</dependency>
+
+```
